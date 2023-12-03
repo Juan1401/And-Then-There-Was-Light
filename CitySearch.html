@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CitySearch</title>
+    <meta charset="utf-8" />
+    <script>
+      var ciudadCo = ["Bogota", "Medellin", "Cali"];
+      var ciudadUS = ["Chicago", "New York", "Los Angeles"];
+
+      var ciudadUser = prompt("Ingresa una ciudad:");
+      //COLOMBIA
+      if (ciudadCo.includes(ciudadUser)) {
+        alert("Efectivamente la ciudad ingresada está en Colombia.╰(*°▽°*)╯");
+      }
+      //USA
+      else if (ciudadUS.includes(ciudadUser)) {
+        alert("Efectivamente la ciudad ingresada está en USA. 🦅");
+      } else {
+        alert("No se encuentra en nuestra BD");
+      }
+      alert("FIN");
+    </script>
+  </head>
+  <body></body>
+</html>
