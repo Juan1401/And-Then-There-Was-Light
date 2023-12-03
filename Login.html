@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoginUser</title>
+    <meta charset="utf-8" />
+    <script>
+      var User = "Pepito";
+      var Contraseña = "Pene";
+
+      var LoginUser = prompt("Ingresa tu usuario:");
+      //LOGIN
+
+      if (LoginUser == User)  {
+        alert("El usuario es correcto");
+      }else {
+      while (LoginUser != User){
+        alert("El usuario es incorrecto, vuelve a ingresarlo");
+        var LoginUser = prompt("Ingresa tu usuario:");
+      }
+    }
+      //CONTRASEÑA
+     var Contraseña = prompt ("Ingresa tu contraseña")
+      if (ContraseñaUser == Contraseña) {
+        alert("Tu cotraseña es correcta");
+        alert("BIENVENIDO");
+      }
+      else {
+      while (ContraseñaUser != Contraseña){
+        alert("La contraseña es incorrecta, vuelve a ingresarla");
+        var Contraseña = prompt ("Ingresa tu contraseña")
+      }
+    }
+    </script>
+  </head>
+  <body></body>
+</html>
