@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-9"/>
+    <meta charset="utf-9" />
     <title>Practica en Platzi</title>
     <script>
         "use strict"
 
-var habitacion = confirm("¿Estas en la habitación?");
+        var habitacion = confirm("¿Estas en la habitación?");
 
-
-if (habitacion == true)
-{
-
-    alert("Enciende el SWITCH");
-
-    var enciende = confirm("¿El bombillo encendió?");
-    if (enciende == true )
-    {
-        alert("ENCENDIO EL BOMBILLO, GENIAL!");
-    }
-    else 
-    {
-        var energia = confirm("¿Hay Energia?");
-        if (energia == true)
-        {
-            alert ("Puede que el bombillo este malo, revisalo.");
+        while (habitacion == false) {
+            alert("Ve a la habitación");
+            var habitacion = confirm("¿Estas en la habitación?");
         }
-        else 
-        {
-            alert ("Espera a que regrese la energia.");
+
+        if (habitacion == true) {
+
+            alert("Enciende el SWITCH");
+
+            var enciende = confirm("¿El bombillo encendió?");
+            if (enciende == true) {
+                alert("ENCENDIO EL BOMBILLO, GENIAL!");
+            }
+            else {
+                var energia = confirm("¿Hay Energia?");
+                if (energia == true) {
+                    alert("Puede que el bombillo este malo, revisalo.");
+                }
+                else {
+                    alert("Espera a que regrese la energia.");
+                }
+            }
+            alert("FIN")
         }
-    }
-}
-else 
-{
-    alert("Ve a la habitación");
-
-}
-
     </script>
-<body>
-
-
 </body>
 </html>
