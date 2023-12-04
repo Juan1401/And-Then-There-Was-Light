@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Cajero Automatico</title>
+    <script>
+    "use strict"
+    var ubicacion = confirm("¿Estas en el cajero?");        
+    var opciones = 0;
+    var saldo = 2800000
+
+    while(ubicacion == false){
+        alert("Dirigete al Cajero")
+        var ubicacion = confirm("¿Estas en el cajero?");
+    }
+    if(ubicacion == true){
+        alert("Ingresa tu tarjeta");
+
+        alert("Bienvenido a tu Banco Favorito");
+
+        var opciones = prompt(" Presiona la opción 1 para Retirar Dinero | Presiona la opción 2 para Consultar tu saldo | Presiona la opción 3 para salir de este menu");
+
+        while (opciones !=3 ){
+
+        //1 Retiro de Dinero
+        if( opciones == 1 )
+        {
+            let retiro = prompt("Ingrese la cantidad a retirar");
+
+            var sesion = 1
+
+            while (sesion == 1){
+            if (retiro > saldo)
+            {
+                alert("Fondos insuficientes");
+                var opciones = prompt(" Presiona la opción 1 para Retirar Dinero | Presiona la opción 2 para Consultar tu saldo | Presiona la opción 3 para salir de este menu");
+                sesion = 0;
+            }
+            if (retiro <= saldo)
+            {
+                alert("Retiro Exitoso")
+                var opciones = prompt(" Presiona la opción 1 para Retirar Dinero | Presiona la opción 2 para Consultar tu saldo | Presiona la opción 3 para salir de este menu");
+                sesion = 0;
+            }
+        }   
+        }
+        //2 Consulta de Saldo
+        if( opciones == 2 )
+        {
+            alert("Tu saldo es: "+saldo);
+            var opciones = prompt(" Presiona la opción 1 para Retirar Dinero | Presiona la opción 2 para Consultar tu saldo | Presiona la opción 3 para salir de este menu");
+                
+        }
+        if( opciones == 3  )
+        {
+            alert("Sesion Terminida, Hasta una pronta ocasión");
+        }
+         //Comando Invalido
+      }
+    }
+    </script>
+</head>
+<body>
+    <h1>Aplicacion de Banco</h1>
+</body>
+</html>

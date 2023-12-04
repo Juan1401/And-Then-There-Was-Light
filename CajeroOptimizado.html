@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cajero Automatico - Optimizado</title>
+    <script>
+      "use strict";
+      var ubicacion = confirm("¿Estas en el cajero?");
+      var opciones = 0;
+      var saldo = 2800000;
+
+      while (!ubicacion) {
+        alert("Dirigete al Cajero");
+        var ubicacion = confirm("¿Estas en el cajero?");
+      }
+      if (ubicacion) {
+        alert("Ingresa tu tarjeta");
+        alert("Bienvenido a tu Banco Favorito");
+
+        var opciones;
+
+        do {
+          opciones = prompt(
+            " Presiona la opción 1 para Retirar Dinero | Presiona la opción 2 para Consultar tu saldo | Presiona la opción 3 para salir de este menu"
+          );
+
+          switch (parseInt(opciones)) {
+            case 1:
+              retirarDinero();
+              break;
+            case 2:
+              consultarSaldo();
+              break;
+            case 3:
+              alert("Sesion Terminida, Hasta una pronta ocasión");
+            default:
+              alert("Opción inválida. Por favor, elige una opción válida.");
+              break;
+          }
+        } while (opciones != 3);
+
+        function retirarDinero() {
+            var retiro = prompt("Ingrese la cantidad a retirar");
+
+            if (retiro > saldo) {
+                alert("Fondos insuficientes");
+            } else {
+                saldo -= retiro;
+                alert("Retiro Exitoso. Nuevo saldo: " + saldo);
+            }
+        }
+        function consultarSaldo() {
+          if (opciones == 2) {
+            alert("Tu saldo es: " + saldo);
+        }
+          }
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Aplicacion de Banco</h1>
+  </body>
+</html>
